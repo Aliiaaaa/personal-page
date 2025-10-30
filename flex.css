@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("https://cdn.imgchest.com/files/j7kzcbnrz7m.png");
+  opacity: 0.5;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  gap: 10px;
+}
+
+.container > * {
+  background-color: lightblue;
+  font-size: 10rem;
+  color: blue;
+  border: 2px dashed blue;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 200px;
+
+  flex: 1 1 auto;
+}
+
+.box1 { flex: 1 1 11.5%; }
+.box2 { flex: 1 1 43.5%; }
+.box3 { flex: 1 1 43.57%; }
+.box4 { flex: 1 1 85.36%; }
+.box5 { flex: 1 1 13.9%; }
+.box6 { flex: 1 1 100%; }
+
+.container > * span {
+  position: relative;
+  top: -3px;
+}
+.box3 span {
+  margin-left: 3px;
+}
