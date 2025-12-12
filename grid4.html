@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid 3 Layout</title>
+    <link rel="stylesheet" href="grid4.css" id="styleSheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+<button onclick='switchStyle()' style='position: absolute; top:10px; right:10px; z-index: 10;'>Style</button>
+
+<div class="container">
+
+    <div class="logo">
+        <img src="https://th.bing.com/th/id/OIG2.3UehGhQdtbM5mNBRuo47?w=270&h=270&c=6&r=0&o=5&cb=ucfimg2&pid=ImgGn&ucfimg=1" alt="KG Site Logo">
+    </div>
+
+    <div class="hero">
+        <h1>| ORGANIZATION | PEOPLE |</h1>
+    </div>
+
+    <div class="menu">
+        <ul class="top-bar">
+            <li class="rating">Rating</li>
+            <li class="join">Join</li>
+            <li class="user"><i class="fas fa-user"></i></li>
+            <li class="search"><i class="fas fa-search"></i></li>
+            <li class="menu-text">MENU</li>
+            <li class="caret"><i class="fas fa-caret-down"></i></li>
+        </ul>
+    </div>
+
+    <div class="flex1">3</div>
+    <div class="left1">4</div>
+    <div class="right2">7</div>
+    <div class="flex2">5</div>
+
+</div>
+
+<script>
+function switchStyle() {
+    let style = document.getElementById('styleSheet');
+    if (style.getAttribute('href') == 'grid4.css') {
+        style.setAttribute('href', 'grid2.css');
+    } else {
+        style.setAttribute('href', 'grid4.css');
+    }
+}
+</script>
+</body>
+</html>
