@@ -4,14 +4,17 @@
 }
 
 body {
-    background-image: url(https://cdn.imgchest.com/files/b49zcb8j3yw.png);
-    background-repeat: no-repeat;
-    opacity: 0.5;
-    width: 100%;
-    max-width: 100%;
-    font-size: 2rem;
-    background-repeat: no-repeat;
+  position: relative;
 }
+
+.kg-target {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
 
 .container {
     display: grid;
@@ -66,9 +69,12 @@ body {
 }
 
 .box6 .top-bar li.rating {
-    position: absolute;
-    left: 1025px;
+  position: absolute;
+  left: 0;
+  transform: translateX(1025px);
+  white-space: nowrap;
 }
+
 
 .box6 .top-bar li.user i {
     position: relative;
