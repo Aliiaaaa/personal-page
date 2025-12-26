@@ -1,45 +1,442 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Verdana;
+    background-image: url();
+    background-repeat: no-repeat;
+    max-width: 1143px;
+    min-height: 1583px;
+    font-size: 2rem;
+    opacity: 1;
 }
 
-#header {
-    background-color: dimgray;
-    height: 6rem;
-    border-bottom: 0.5rem solid LightSalmon;
+.kg-target {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
 }
 
-h1 {
-    font-size: 1.5rem;
+
+.container {
+    display: grid;
+    grid-template-columns: 
+        minmax(100px, 100px) 
+        minmax(752px, 752px) 
+        minmax(428px, 428px);
+
+    grid-template-rows:
+        minmax(47px, 47px)
+        minmax(479px, 479px)
+        minmax(104px, 104px)
+        minmax(664px, 664px)
+        minmax(133px, 133px)
+        minmax(46px, 46px)
+        minmax(665px, 665px);
+
+    grid-template-areas:
+        "one   six   six   six"
+        "two   two   two   two"
+        "three three three three"
+        "four  four  seven seven"
+        "five  five  five  five";
+} 
+
+.container > * {
+    border: 2px dashed blue;
+    padding: 0.5rem;
+}
+
+.box1 {
+    grid-area: one;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding-left: 10px; 
+}
+
+.logo-container img {
+    width: 50px; 
+    height: 45px;
+    object-fit: contain; 
+    margin-left: 0; 
+    margin-top: 0;
+}
+
+.box2 {
+    grid-area: two;
+    background-image: url('https://who.ca-news.org/uiall-img/whoiswho/img/header-bg.jpg');
+    background-size: cover;
+    background-position: center; 
+    width: 100%;
+    height: 100%;
+}
+
+.box2 {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.orgpeople {
+  color: white;
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.content-limiter {
+    display: flex;
+    flex-direction: column;
+    width: 63.5%;
+}
+
+.search-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.tables-container {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.table-profile, .table-subscribe {
+    background: rgba(255, 255, 255, 0.5); 
+    color: #f0f0f0;
+    padding: 10px 18px;
+    font-size: 14px;
+}
+
+.search-bar {
+    display: flex;
+    width: 100%;
+    height: 38px;
+    margin-top: -10px;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    padding-left: 15px;
+}
+
+.search-btn {
+    width: 80px;
+    background: #E30613;
+    border: none;
     color: white;
 }
 
-#title {
-    height: 27.5rem;
-    background-color: lightgray;
-    text-align: center;
+.box3 {
+    grid-area: three;
+    display: flex;
+    align-items: center;
+    
 }
 
-* {
+.box3-container {
+    display: flex;
+    align-items: center; 
+    width: 100%;
+    height: 47px;
+    background: #e7e7e7;
+    color: #3f4f5e;
+    margin-top: 12px; 
+    padding-left: 8px;
+}
+
+.box3-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+    align-items: center;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#about {
+.box3-menu li {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
     display: flex;
+    color: #005B7F;
+    text-decoration: underline;
 }
 
-#about img {
-    height: 21.5rem;
-}
-
-h3 {
-    color: LightSalmon;
-    width: 10rem;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 1.5rem;
-}
-
-#fav {
+.menu-left-group {
     display: flex;
-    justify-content: space-evenly;
+    gap: 33px;
+}
+
+.box3-menu li {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.box3-menu li.int {
+    font-size: 19px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #888;
+    justify-content: center;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+.box3-menu li.people {
+    justify-content: center;
+}
+
+
+.box4 {
+  grid-area: four;
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+background-color: #f4f4f4; 
+    padding: 15px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.person-card {
+  width: 48%;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.person-card img {
+  width: 150px;
+  height: 200px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.row .person-card:first-child {
+  margin-left: 10px;
+}
+
+.row .person-card:nth-child(2) img {
+  margin-left: -30px;
+}
+
+.text h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #194967;
+  margin: 0 0 6px;
+  line-height: 1.3;
+  flex: 1;
+  line-height: 1.1; 
+}
+
+.text p {
+  margin-top: -3px;
+}
+
+.birth {
+  background: rgba(88, 189, 199, 0.7) no-repeat;
+  padding: 3px 5px;
+  font-size: 13px;
+  color: #f4f4f4;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.age {
+  font-size: 13px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.text p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.4;
+}
+
+
+.box5 {
+    grid-area: five;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    gap: 20px;
+}
+
+.footer-logo img {
+    width: 120px;
+    height: auto;
+}
+
+.footer-center {
+    flex: 2;
+    font-size: 13px;
+    line-height: 1.5;
+    padding-left: 20px;
+}
+
+.footer-center p {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.footer-right {
+    flex: 1;
+    font-size: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-right p {
+    margin: 0;
+    color: #ccc;
+}
+
+.footer-right a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.box6 {
+    grid-area: six;
+    display: grid;
+    align-items: center;
+    background-color: white;
+    padding: 0;
+}
+
+.box6 .top-bar {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 19px;
+    justify-content: flex-end;
+    font-family: 'Tinos', serif;
+    font-size: 15px;
+    font-weight: normal;
+    align-items: center;
+    color: #333;
+}
+
+.box6 .top-bar li.rating {
+  position: absolute;
+  left: 0;
+  transform: translateX(1025px);
+  white-space: nowrap;
+}
+
+
+.box6 .top-bar li.user i {
+    position: relative;
+    top: 3px;
+    left: 3px;
+}
+
+.box6 .top-bar li.search {
+    position: relative;
+    top: 2px;
+    left: 3px;
+
+}
+
+.box6 .top-bar li.menu-text {
+    position: relative;
+    left: 4px;
+}
+
+.box6 .top-bar li.caret {
+    position: relative;
+    right: 9px;
+}
+
+.box7 {
+  grid-area: seven;
+  background-color: #f4f4f4; 
+  padding: 15px;
+  
+}
+
+.kyrgyzstan-list-container {
+    font-family: "Times New Roman", Times, serif;
+    color: #333645;
+    height: 100%;
+    background-color: #fff;
+    width: 100%;
+}
+
+.list-header {
+    font-size: 24px;
+    letter-spacing: -1.5px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #333645;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    font-weight: normal;
+}
+.arrow {
+    font-size: 14px;
+    color: #333;
+}
+
+.kyrgyzstan-list {
+    list-style: none;
+
+}
+
+.kyrgyzstan-list li {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+     padding-left: 0px;
+     margin-left: -10px;
+}
+
+
+.buttonMenu {
+    display: none;
+}
+
+.box6 {
+    grid-area: six;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: static;
+}
+
+.box2 {
+    grid-area: two;
+    min-height: 400px;
+    background-image: url('https://who.ca-news.org/uiall-img/whoiswho/img/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
 }

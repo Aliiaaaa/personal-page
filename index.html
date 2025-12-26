@@ -1,13 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>My First Web Page</title>
-  </head>
-  <body>
-    <h1>Hello, this is my first web page!</h1>
-    <h2>My name is Aliia</h2>
-    <p>I am learning web development, and this is my very first project.</p>
-    <img src="https://i.imgur.com/c7RVNBH.jpg" alt="bear" />
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Project</title>
+  
+  <link rel="stylesheet" href="style.css" class="style">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+<button class="buttonMenu" onclick="toggleMenu()">
+  <i class="fas fa-bars"></i>
+</button>
+
+<button onclick="switchStyle()" style="position:fixed; top:0; right:0; z-index:10000; padding: 10px; cursor: pointer;">
+  Style
+</button>
+
+<img
+  src="https://cdn.imgchest.com/files/wye3cdnxp4b.png"
+  alt=""
+  class="kg-target"
+>
+
+<div class="container">
+  <div class="box1">
+    <div class="logo-container">
+        <img src="https://i.postimg.cc/FzMGSnWf/Snimok-ekrana-2025-12-25-153545.png" alt="Who is Who Logo">
+    </div>
+  </div>
+
+  <div class="box2">
+    <div class="content-limiter">
+        <div class="org-people"></div>
+        <div class="orgpeople">| ORGANIZATION  | PEOPLE </div>
+        <div class="search-area">
+            <div class="tables-container">
+                <div class="table-profile">Add your profile</div>
+                <div class="table-subscribe">Subscribe</div>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search" class="search-input">
+                <button class="search-btn"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="box3">
+    <div class="box3-container">
+      <ul class="box3-menu">
+        <div class="menu-left-group">
+          <li>A week</li>
+          <li>Month</li>
+          <li>Year</li>
+        </div>
+      
+        <li class="int">24857</li>
+        <li class="people">people</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box4">
+    <div class="row">
+      <div class="person-card">
+        <img src="https://i.postimg.cc/0yMMFyyX/img1.png" alt="">
+        <div class="text">
+          <h3>Ashymbaeva Toktobubu</h3>
+          <h3>Abasovna</h3>
+          <span class="birth">11/14/1966</span> <span class="age">56 years old</span>
+          <p>Deputy Minister of Education and Science of the Kyrgyz Republic</p>
+        </div>
+      </div>
+
+      <div class="person-card">
+        <img src="https://i.postimg.cc/PJSy355D/img4.png" alt="">
+        <div class="text">
+          <h3>Niyazaliev Nuran Sadyrovich</h3>
+          <span class="birth">1.4.1975</span> <span class="age">47 years old</span>
+          <p>ex-First Deputy Minister of Foreign Affairs of the Kyrgyz Republic</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="person-card">
+        <img src="https://i.postimg.cc/HxQP2mMG/img2.png" alt="">
+        <div class="text">
+          <h3>Batyrbekova Aybarchyn</h3>
+          <h3>Bakytbekovna</h3>
+          <span class="birth">10.3.1991</span> <span class="age">31 year</span>
+          <p>Head of the press service of the Main Department of Internal Affairs of Bishkek, police captain</p>
+        </div>
+      </div>
+
+      <div class="person-card">
+        <img src="https://i.postimg.cc/9Q6pNSCd/img5.png" alt="">
+        <div class="text">
+          <h3>Kazakbaev Ruslan Aitbaevich</h3>
+          <span class="birth">18.5.1967</span> <span class="age">55 years</span>
+          <p>Ambassador Extraordinary and Plenipotentiary of the Kyrgyz Republic to Turkey</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="person-card">
+        <img src="https://i.postimg.cc/vBd0DKNq/img3.png" alt="">
+        <div class="text">
+          <h3>Omuraliev Kubanychbek</h3>
+          <h3>Kasymovich</h3>
+          <span class="birth">15.9.1960</span> <span class="age">62 years old</span>
+          <p>Secretary General of the Organization of Turkic States</p>
+        </div>
+      </div>
+
+      <div class="person-card">
+        <img src="https://i.postimg.cc/d3Vmycm6/img6.png" alt="">
+        <div class="text">
+          <h3>Erkin Aidit</h3>
+          <span class="birth">2.3.1972</span> <span class="age">50 years</span>
+          <p>Ambassador Extraordinary and Plenipotentiary of the Kyrgyz Republic to the Kingdom of Belgium</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="box5">
+      <div class="footer-logo">
+          <img src="https://i.postimg.cc/hGsPyXdL/Snimok-ekrana-2025-12-25-153732.png" alt="KTO ECTb KTO">
+      </div>
+
+      <div class="footer-center">
+          <p>© News agency AKIpress, "Who is Who", 2003-2022.</p>
+          <p>The materials posted on the Who's Who website are intended for personal use only. Public distribution of materials from printed and online publications is possible only with the written consent of the editors of "Who is who".</p>
+      </div>
+
+      <div class="footer-right">
+          <p>Kyrgyzstan, Bishkek, Chyngyz Aitmatov Avenue, 299/5 (Map)</p>
+          <a href="mailto:akipresskto@gmail.com">akipresskto@gmail.com</a>
+          <a href="mailto:kto@akipress.org">kto@akipress.org</a>
+      </div>
+  </div>
+
+  <div class="box6">
+    <ul class="top-bar">
+      <li class="rating">Rating</li>
+      <li class="join">Join</li>
+      <li class="user"><i class="fas fa-user"></i></li>
+      <li class="search"><i class="fas fa-search"></i></li>
+      <li class="menu-text">MENU</li>
+      <li class="caret"><i class="fas fa-caret-down"></i></li>
+    </ul>
+  </div>
+
+  <div class="box7">
+      <div class="kyrgyzstan-list-container">
+          <div class="list-header">
+              KYRGYZSTAN <span class="arrow">︾</span>
+          </div>
+          <ul class="kyrgyzstan-list">
+              <li>The president</li>
+              <li>Zhogorku Kenesh</li>
+              <li>Cabinet of Ministers</li>
+              <li>Ministries and departments</li>
+              <li>Judicial system</li>
+              <li>healthcare</li>
+              <li>Strong structure</li>
+              <li>Bishkek</li>
+              <li>Osh</li>
+              <li>Batken region</li>
+              <li>Jalal-Abad region</li>
+              <li>Issyk-Kul region</li>
+              <li>Naryn region</li>
+              <li>Osh region</li>
+              <li>Talas region</li>
+              <li>Chui area</li>
+              <li>Science and education</li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+<script>
+function switchStyle() {
+  let style = document.querySelector('.style');
+  if (style.getAttribute('href') === 'style.css') {
+    style.setAttribute('href', 'style2.css');
+  } else {
+    style.setAttribute('href', 'style.css');
+  }
+}
+
+function toggleMenu() {
+    let menu = document.querySelector('.box6');
+    menu.classList.toggle('mobileMenu');
+}
+</script>
+
+</body>
 </html>

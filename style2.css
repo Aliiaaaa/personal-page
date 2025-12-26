@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:#888;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.container {
+    display: grid;
+    max-width: 1143px;
+    margin: 0 auto;
+    padding: 10px;
+    gap: 15px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "one"
+        "six"
+        "two"
+        "three"
+        "four"
+        "seven"
+        "five";
+}
+
+@media (min-width: 900px) {
+    .container {
+        grid-template-columns: 100px 1fr 300px;
+        grid-template-areas:
+            "one   six   six"
+            "two   two   two"
+            "three three three"
+            "four  four  seven"
+            "five  five  five";
+    }
+}
+
+.container > div {
+    background: white;
+    border-top: 3px solid #194967;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.box1 { 
+    grid-area: one; 
+    border: none; 
+}
+
+.box6 { 
+    grid-area: six; 
+    border: none; 
+    background: transparent;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+}
+
+.top-bar {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+    font-size: 13px;
+    color: #555;
+}
+
+.top-bar li i {
+    color: #194967;
+    cursor: pointer;
+}
+
+.top-bar li:hover {
+    color: #E30613;
+    cursor: pointer;
+}
+
+
+.box2 {
+    grid-area: two !important;
+    width: 100%;
+    height: 480px;
+    background-image: url('https://who.ca-news.org/uiall-img/whoiswho/img/header-bg.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.box2 {
+    grid-area: two;
+    min-height: 350px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://who.ca-news.org/uiall-img/whoiswho/img/header-bg.jpg') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.content-limiter {
+    width: 100%;
+    max-width: 1143px;
+    text-align: center;
+}
+
+.orgpeople {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.tables-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.table-profile, .table-subscribe {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 8px 15px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.search-bar {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.search-btn {
+    padding: 10px 15px;
+    background: #eee;
+    border: none;
+}
+
+/* Mobile Fix */
+@media (max-width: 500px) {
+    .box2 { min-height: 250px; }
+    .tables-container { flex-direction: column; align-items: center; }
+}
+
+.box3 { 
+    grid-area: three; 
+    background: #e7e7e7; 
+    border-top: none;
+    padding: 10px;
+}
+
+.box3-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+    width: 100%;
+}
+
+.menu-left-group {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.box3-menu li {
+    color: #005B7F;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.box3-menu li.int {
+    font-size: 20px;
+    text-decoration: none;
+    color: #444;
+}
+
+.box4 { 
+    grid-area: four; 
+    background: transparent !important; 
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.person-card {
+    flex: 1 1 45%;
+    min-width: 300px;
+    display: flex;
+    gap: 15px;
+    background: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.person-card img {
+    width: 100px;
+    height: 130px;
+    object-fit: cover;
+}
+
+.box7 { grid-area: seven; }
+
+.list-header {
+    background: #194967;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.kyrgyzstan-list {
+    list-style: none;
+}
+
+.kyrgyzstan-list li {
+    padding: 5.5px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.box5 { 
+    grid-area: five;
+    background-color: #333;
+    color: #999;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.footer-logo img {
+    width: 120px;
+    height: auto;
+}
+
+.footer-center {
+    flex: 1;
+    padding: 0 20px;
+    font-size: 12px;
+}
+
+.kg-target {
+    display: none;
+}
+
+.buttonMenu {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  
+  .buttonMenu {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 10001;
+    background: #194967;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .box6 {
+    display: none;
+  }
+
+  .box6.mobileMenu {
+    display: block;
+    position: fixed;
+    top: 60px;
+    left: 10px;
+    width: 200px;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 10000;
+    padding: 15px;
+  }
+
+  .top-bar {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 10px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "one"
+      "two"
+      "three"
+      "four"
+      "five";
+  }
+}
