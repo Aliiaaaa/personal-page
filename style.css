@@ -46,7 +46,6 @@ body {
 } 
 
 .container > * {
-    border: 2px dashed blue;
     padding: 0.5rem;
 }
 
